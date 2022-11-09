@@ -5,5 +5,6 @@
 
 
 ### Aufgabenverteilung
-- Funktionalität
-- Design
+- Inhalt/Produkte:
+- Design:
+- Implementierung: 
