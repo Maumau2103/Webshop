@@ -12,6 +12,16 @@ body{
     background-position: center;
 }
 
+.container {
+    width: 50%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
@@ -34,7 +44,7 @@ h3{
     color: #333;
     text-decoration: none;
     position: absolute;
-    left: 200px;
+    left: 25%
 }
 
 p{
@@ -43,6 +53,24 @@ p{
     color: #333;
     text-decoration: none;
     text-align: justify;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+div form{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    text-align: justify;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333;
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -128,60 +156,4 @@ nav ul li .active{
     height: 250px;
     transition: 0.5s;
     background-color: rgba(78, 78, 78, 0.13);
-}
-
-#slider-span1:target ~ .image-slider #img1,
-#slider-span1:target ~.image-slider #button-1{
-    width:250px;
-    height: 250px;
-    background-color: transparent;
-}
-#slider-span2:target ~ .image-slider #img2,
-#slider-span2:target ~.image-slider #button-2{
-    width:250px;
-    height: 250px;
-    background-color: transparent;
-}
-#slider-span3:target ~ .image-slider #img3,
-#slider-span3:target ~.image-slider #button-3{
-    width:250px;
-    height: 250px;
-    background-color: transparent;
-}
-#slider-span4:target ~ .image-slider #img4,
-#slider-span4:target ~.image-slider #button-4{
-    width:250px;
-    height: 250px;
-    background-color: transparent;
-}
-#slider-span5:target ~ .image-slider #img5,
-#slider-span5:target ~.image-slider #button-5{
-    width:250px;
-    height: 250px;
-    background-color: transparent;
-}
-#slider-span6:target ~ .image-slider #img6,
-#slider-span6:target ~.image-slider #button-6{
-    width:250px;
-    height: 250px;
-    background-color: transparent;
-}
-
-#slider-span1:target ~.image-slider{
-    left:40%;
-}
-#slider-span2:target ~.image-slider{
-    left:24%;
-}
-#slider-span3:target ~.image-slider{
-    left:8%;
-}
-#slider-span4:target ~.image-slider{
-    left:-8%;
-}
-#slider-span5:target ~.image-slider{
-    left:-24%;
-}
-#slider-span6:target ~.image-slider{
-    left:-40%;
 }

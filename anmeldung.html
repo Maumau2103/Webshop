@@ -1,98 +1,102 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="de">
 <head>
-    <title> Anmeldung </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+
     <style> 
+
         body {
-		background-color:#4EB5ED; font-family: Arial, Helvetica, sans-serif; color:white
-		display: flex; 
-		align-items: center; 
-		}
-	label{
-		width:100px;
-		display:inline-block;
-		margin:4px;
-		}
-   	input[type=submit]{
-		width: 100%;
-		padding: 15px;
-		margin: 10px
-		border-radius: 10px;
-		border:none;
-		background: #39FF14;
-		cursor:pointer;
-		}
-	
-    	.div1 {
-		font-family: Arial, Helvetica, sans-serif; color:white;
-		background-color: darkblue;
-		width: 500px;
- 		border-style: solid;
-		border-color: black;
- 		padding: 50px;
-		margin: auto ;
-		margin-top:180px;
-		border-radius: 7px;
-		position: relative; 
-		align-items: center;  
-
-		}
-
-	header	{
-		background-color: red;
-		padding-right: 20px;
-		padding-left:20px 
-		margin-left:0px;
-		margin-top:-8px;
-		}
-
-	.logo {	
-		display: flex;
-		justify-content: space-between;
-		allign-items: center
-		}
-	a{ 	
-		color: white;
-		text-decoration: none;
-		margin-left: 20px
-		
-		}
-	</style>
+            font-family: Arial, Helvetica, sans-serif;
+        }
+     
+        * {
+            box-sizing: border-box;
+        }
+     
+        input[type=text], select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+     
+        .container {
+            width: 30%;
+            border-radius: 5px;
+            background-color: #ffffff;
+            padding: 20px;
+            margin-left: 35%;
+        }
+     
+        button {
+            background-color: #4b4241;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+     
+        button:hover {
+            background-color: #00a19c;
+        }
+     
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+    </style>
 </head>
 
 <body>
-    <header>
-	<div class="logo">
-   	<h1 class="headline" style="font-family: Arial, Helvetica, sans-serif; color:white">Logo selftaught</h1> 
-	 <h1 align="center" style="font-family: Arial, Helvetica, sans-serif; color:white"> Anmeldung </h1>	 
-   	<div class="Infos">
-   	<h2>
-	<a href="#login"> Login</a>
-	<a href="#impressum"> Impressum</a>
-	</h2>
-	</div>
-	</div>
-    </header>
+
+    <nav>
+        <a href="index.html"> <img src="images/Selftaught_Logo.jpg" alt="logo"> </a>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="impressum.html"> Über Uns </a></li>
+            <li><a class="active" href="anmeldung.html"> Anmelden </a></li>
+            <li><a href="registrierung.html"> Registrieren </a></li>
+            <li> <img src="images/Warenkorb.png" alt="Warenkorb"> </li>
+        </ul>
+    </nav>
 	
-    	<br>
-    	<br>
-    	<div class="div1">
-    	<form>          
-		<label for="uname"> E-Mail </label>
-		<input type="text" id="uname" size="40" maxlength="30">
-		<br>
-		<label for="password">Passwort: </label>
-		<input type="text" id="password" size="40" maxlength="30">
-    	</form>
-	<br>
-	<input type="submit" value="Anmelden">
-	<p>
-	Noch keinen Account?
-	<a href="#regestrierung" style="font-family: Arial, Helvetica, sans-serif; color:orange"> Regestrierung </a>
-	
-	</p>
-     </div> 
+	<br> <br>
+    <h1> Anmeldung </h1>
+    <br> <br> <br> <br>
+
+    <div class="container">
+        <form ACTION="https://web.inxmail.com/[Mandantenname]/subscription/servlet" METHOD="post">
+                <input type="hidden" name="INXMAIL_SUBSCRIPTION" value="[Listenname]"/>
+                <input type="hidden" name="INXMAIL_HTTP_REDIRECT" value="[URL für Landeseite "Erfolg"]"/>
+                <input type="hidden" name="INXMAIL_HTTP_REDIRECT_ERROR" value="[URL für Landeseite "Fehler"]"/>
+                <input type="hidden" name="INXMAIL_CHARSET" value="UTF-8"/>       
+            <label>E-Mail*
+                <input type="text" name="email">
+            </label>
+                <label>Passwort
+                    <input type="text" name="Passwort">
+                </label>
+            <br>
+            <label style="text-align: center;">
+                <input type="submit" name="Submit" value="Anmelden">
+            </label>
+        </form>
+        <br>
+        <p> Noch keinen Account?
+            <a href="registrierung.html" style="font-family: Arial, Helvetica, sans-serif; color:cornflowerblue"> Registrierung </a> </p>
+    </div> 
+
 </body>
 
 </html>
