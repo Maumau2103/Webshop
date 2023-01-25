@@ -1,6 +1,7 @@
 <?php
 if(array_key_exists('Anmelden', $_POST)){
     logIN();
+    echo "test";
 }
 function controllLogIn(){
     $uname    = $_POST['uName'];
