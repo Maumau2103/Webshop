@@ -56,7 +56,7 @@
         <ul>
             <li><a class="active" href="index.html"> Home </a></li>
             <li><a href="impressum.html"> Über Uns </a></li>
-            <li><a href="anmeldung.html" id="Anmelden"> Anmelden </a></li>
+            <li><a href="anmeldung.html" id="Anmelden"> <?php include 'dataManagement.php';?> </a></li>
             <li><a href="registrierung.html"> Registrieren </a></li>
             <li> <img src="images/Warenkorb.png" alt="Warenkorb"> </li>
         </ul>
@@ -67,13 +67,13 @@
     	<div class="div1">
     	    <form>          
 		        <label for="uname"> E-Mail </label>
-		        <input type="text" id="uName" size="40" maxlength="30">
+		        <input type="text" id="uName" name="uName" size="40" maxlength="30">
 		        <br>
 		        <label for="password">Passwort: </label>
-		        <input type="text" id="password" size="40" maxlength="30">
+		        <input type="text" id="password" name="password" size="40" maxlength="30">
     	    </form>
 	        <br>
-	    <input type="submit" value="Anmelden" onclick = "logIn()">
+	    <input type="submit" value="Anmelden" name="Anmelden">
 	    <p style=" text-align: left; color:white; margin-left: initial; ">
 	        Noch keinen Account?
 	        <a href="registrierung.html" style="font-family: Arial, Helvetica, sans-serif; color:orange"> Regestrieren </a>
