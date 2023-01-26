@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+    <script src="scripts.js"></script> 
 <head>
     <title> Registrierung </title>
 	<link rel="stylesheet" href="style.css">
@@ -72,20 +72,76 @@
     	<br>
     	<div class="div1">
     	<form>          
-		<label for="uname", color:white> E-Mail </label>
-		<input type="text" id="uName" size="40" maxlength="30">
-		<br>
-		<label for="password", color:white>Passwort: </label>
-		<input type="text" id="password" size="40" maxlength="30">
+		    <label for="uname", color:white> E-Mail </label>
+		    <input type="text" id="email" size="40" maxlength="30">
+		    <br>
+		    <label for="password", color:white>Passwort: </label>
+		    <input type="text" id="password" size="40" maxlength="30">
     	</form>
-	<br>
-	<input type = "submit" value = "regestrieren">
-	<p text-align: left; color: white; margin-left: initial;>
-	Bereits einen Account?
-	<a href="anmeldung.html" style="font-family: Arial, Helvetica, sans-serif; color:green"> Anmmelden </a>
+	    <br>
+	    <input type = "submit" value = "regestrieren" id = "register">
+	    <p style=" text-align: left; color:white; margin-left: initial; ">
+	    Bereits einen Account?
+	    <a href="anmeldung.html" style="font-family: Arial, Helvetica, sans-serif; color:#39FF14"> Anmmelden </a>
 	
-	</p>
-     </div> 
+	    </p> 
 </body>
 
+<script type="module" >
+    alert("test");
+
+    // Import the functions you need from the SDKs you need
+    import {initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+    import {getDatabase} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAGdYmqeKOhGxPZYm8pelvKbG8Ms7uzPdE",
+        authDomain: "webshop2023-ovgu.firebaseapp.com",
+        databaseURL: "https://webshop2023-ovgu-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "webshop2023-ovgu",
+        storageBucket: "webshop2023-ovgu.appspot.com",
+        messagingSenderId: "255014201712",
+        appId: "1:255014201712:web:a2ed39e090ce3db10107b5"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    document.getElementById("register").addEventListener("click",function(){
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        if (validatePassword(password)==false){
+            alert("Password has to have at least 6 characters!");
+            return;
+        } else 
+        if (validateName(email)==false){
+            alert("E-Mail syntax not viable a correct syntax would be: max.mustermann@gmail.com");
+            return;
+        }else {
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential)=> {
+        
+        const user = userCredential.user;
+        console.log(user);
+        sessionStorage.setItem("email",email);
+        location.href = 'index.html'
+
+        
+    })
+    .catch((error)=>{
+        const errorCode = error.code;
+        const errorMessage =erroe.message;
+        alert(error);
+    })
+    }})
+
+
+</script>
 </html>
