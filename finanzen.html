@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider Sandbox</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_warenkorb.css">
+    <script src="warenkorb.js" async></script>
 </head>
 
 <body>
@@ -17,14 +18,60 @@
             <li><a href="impressum.html"> Über Uns </a></li>
             <li><a href="anmeldung.html"> Anmelden </a></li>
             <li><a href="registrierung.html"> Registrieren </a></li>
-            <li> <img src="images/Warenkorb.png" alt="Warenkorb"> </li>
+            <li><a href="warenkorb.html"> <img src="images/Warenkorb.png" alt="Warenkorb"> </a></li>
         </ul>
     </nav>
 
     <br> <br> 
     <h1> Finanzen </h1>
     <br> <br>
-    <p style="text-align: center;"> Es sind noch keine Kurse in dieser Kategorie vorhanden :( </p>
+    <p style="text-align: center;"> Lerne den Umgang mit Geld, das Investieren oder wie du dir nebenbei ein passives Einkommen aufbaust. </p>
+    <br> <br>
+
+    <section>
+		<div class="shop-items">
+			<div class="shop-item">
+				<span class="shop-item-title">Investieren für Anfänger</span>
+                <br> <br>
+				<img class="shop-item-image" src="images/aktien.png" align="left">
+                Lerne in Aktien, ETFs, Krytowährungen/Bitcoin, Immobilien, Rohstoffe und Anleihen zu investieren und Geld zu vermehren. <a href="Englisch.html"> Mehr erfahren...</a> <br> <br>
+				<div class="shop-item-details">
+					<span class="shop-item-price">24.99 €</span>
+					<button class="btn btn-primary shop-item-button" type="button">in den Warenkorb</button>
+				</div>
+			</div>
+            <br> <br> <br>
+			<div class="shop-item">
+				<span class="shop-item-title">Day-Trading Kurs</span>
+                <br> <br>
+				<img class="shop-item-image" src="images/daytrading.png" align="left">
+                Lerne, worauf es beim Trading wirklich ankommt, damit Du Dir ein zusätzliches Einkommen aufbauen kannst. <a href="Englisch.html"> Mehr erfahren...</a> <br> <br>
+				<div class="shop-item-details">
+					<span class="shop-item-price">14.99 €</span>
+					<button class="btn btn-primary shop-item-button" type="button">in den Warenkorb</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br> <br> <br> <br> <br>
+
+	<section class="container content-section">
+		<h1> Warenkorb <img src="images/Warenkorb.png" height="32px"> </h1>
+		<br> <br> 
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Kurs</span>
+            <span class="cart-price cart-header cart-column">Preis</span>
+            <span class="cart-quantity cart-header cart-column">Menge</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Summe</strong>
+            <span class="cart-total-price">0 €</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">Jetzt Kaufen</button>
+    </section>
+	<br> <br> <br> <br>
 
 </body>
 </html>

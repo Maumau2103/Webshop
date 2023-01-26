@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider Sandbox</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_warenkorb.css">
+    <script src="warenkorb.js" async></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
             <li><a href="impressum.html"> Über Uns </a></li>
             <li><a href="anmeldung.html"> Anmelden </a></li>
             <li><a href="registrierung.html"> Registrieren </a></li>
-            <li> <img src="images/Warenkorb.png" alt="Warenkorb"> </li>
+            <li><a href="warenkorb.html"> <img src="images/Warenkorb.png" alt="Warenkorb"> </a></li>
         </ul>
     </nav>
 
@@ -27,26 +28,61 @@
     <p style="text-align: center;"> Bring deine Sprachkenntnisse aufs nächste Level. </p>
     <br> <br>
 
-    <div class="container"> 
-        <img src="Bild-Englisch.jpg" align="left" style="width: 25%; margin-right: 20px; border-radius: 10px;"> 
-        In diesem Kurs erlernen sie Grundlegegende Englischskills bis hin zu schon fortgeschrittenen Sprachskills. 
-        <a href="Englisch.html" style="font-family: Arial, Helvetica, sans-serif; color:cornflowerblue"> Mehr erfahren... </a> 
-        <br> <br> <br> <br> <br> <br> <br>
-    </div>
+    <section>
+		<div class="shop-items">
+			<div class="shop-item">
+				<span class="shop-item-title">Englisch Sprachkurs</span>
+                <br> <br>
+				<img class="shop-item-image" src="images/english.png" align="left">
+                In diesem Kurs erlernen sie grundlegende Englisch-Kenntnisse bis hin zu schon fortgeschrittenen Sprachskills. <a href="Englisch.html"> Mehr erfahren...</a> <br> <br>
+				<div class="shop-item-details">
+					<span class="shop-item-price">19.99 €</span>
+					<button class="btn btn-primary shop-item-button" type="button">in den Warenkorb</button>
+				</div>
+			</div>
+            <br> <br> <br>
+			<div class="shop-item">
+				<span class="shop-item-title">Französich Sprachkurs</span>
+                <br> <br>
+				<img class="shop-item-image" src="images/französisch.png" align="left">
+                In diesem Kurs erlernen Sie grundlegende Kenntnisse in der Sprache Französisch, mit denen sie sich verständigen können. <a href="Englisch.html"> Mehr erfahren...</a> <br> <br>
+				<div class="shop-item-details">
+					<span class="shop-item-price">14.99 €</span>
+					<button class="btn btn-primary shop-item-button" type="button">in den Warenkorb</button>
+				</div>
+			</div>
+            <br> <br> <br>
+            <div class="shop-item">
+				<span class="shop-item-title">Spanisch Sprachkurs</span>
+                <br> <br>
+				<img class="shop-item-image" src="images/spanisch.png" align="left"> 
+                In diesem Kurs erlernen Sie grundlegende Spanisch-Kenntnisse, mit denen Sie sich verständigen können. <a href="Englisch.html"> Mehr erfahren...</a> <br> <br>
+				<div class="shop-item-details">
+					<span class="shop-item-price">19.99 €</span>
+					<button class="btn btn-primary shop-item-button" type="button">in den Warenkorb</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br> <br> <br> <br> <br>
 
-    <div class="container"> 
-        <img src="Bild-Englisch.jpg" align="left" style="width: 25%; margin-right: 20px; border-radius: 10px;"> 
-        In diesem Kurs erlernen sie Grundlegegende Englischskills bis hin zu schon fortgeschrittenen Sprachskills. 
-        <a href="Englisch.html" style="font-family: Arial, Helvetica, sans-serif; color:cornflowerblue"> Mehr erfahren... </a> 
-        <br> <br> <br> <br> <br> <br> <br>
-    </div>
-
-    <div class="container"> 
-        <img src="Bild-Englisch.jpg" align="left" style="width: 25%; margin-right: 20px; border-radius: 10px;"> 
-        In diesem Kurs erlernen sie Grundlegegende Englischskills bis hin zu schon fortgeschrittenen Sprachskills. 
-        <a href="Englisch.html" style="font-family: Arial, Helvetica, sans-serif; color:cornflowerblue"> Mehr erfahren... </a> 
-        <br> <br> <br> <br> <br> <br> <br>
-    </div>
+	<section class="container content-section">
+		<h1> Warenkorb <img src="images/Warenkorb.png" height="32px"> </h1>
+		<br> <br> 
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Kurs</span>
+            <span class="cart-price cart-header cart-column">Preis</span>
+            <span class="cart-quantity cart-header cart-column">Menge</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Summe</strong>
+            <span class="cart-total-price">0 €</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">Jetzt Kaufen</button>
+    </section>
+	<br> <br> <br> <br>
 
 </body>
 </html>
