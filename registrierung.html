@@ -71,12 +71,12 @@
     	<br>
     	<br>
     	<div class="div1">
-    	<form>          
-		    <label for="uname", color:white> E-Mail </label>
-		    <input type="text" id="email" size="40" maxlength="30">
-		    <br>
-		    <label for="password", color:white>Passwort: </label>
-		    <input type="text" id="password" size="40" maxlength="30">
+    	<form>	
+		 <label for="uname" style="color:white;text-align: left; margin-left: initial">  E-Mail:</label>
+		        <input type="text" id="email" name="uName" size="40" maxlength="30">
+		        <br>
+		    <label for="password" style="color:white;text-align: left; margin-left: initial">  Passwort: </label>
+		        <input type="text" id="password" name="password" size="40" maxlength="30">
     	</form>
 	    <br>
 	    <input type = "submit" value = "regestrieren" id = "register">
@@ -88,7 +88,6 @@
 </body>
 
 <script type="module" >
-    alert("test");
 
     // Import the functions you need from the SDKs you need
     import {initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";

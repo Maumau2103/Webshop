@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
+    
 <head>
+	
     <title> Anmelden </title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script> 
+	<script src="scripts.js"></script> 
+	
     <style> 
-
         body {
 		background-color:#4EB5ED; font-family: Arial, Helvetica, sans-serif; color:white;
 		background-position: initial;
@@ -46,24 +48,20 @@
 		margin-left: 20px
 		
 		}
-	    
-        textwhite{
-	    color: white;
-	    text-decoration: none;
-	    }
 	</style>
 
 </head>
 
 <body onload="get()">
+		
 	<nav>
-        <a href="index.html"> <img src="images/Selftaught_Logo.jpg" alt="logo"> </a>
+        <a href="index.html"> <img src="images/SELFtaught (1).jpg" alt="logo"> </a>
         <ul>
-            <li><a href="index.html"> Home </a></li>
+            <li><a class="active" href="index.html"> Home </a></li>
             <li><a href="impressum.html"> Über Uns </a></li>
-            <li><a class="active" href="anmeldung.html" id="Anmelden"> Anmelden </a></li>
+            <li><a href="anmeldung.html" id="Anmelden"> Anmelden </a></li>
             <li><a href="registrierung.html"> Registrieren </a></li>
-            <li><a href="warenkorb.html"> <img src="images/Warenkorb.png" alt="Warenkorb"> </a></li>
+            <li> <img src="images/Warenkorb.png" alt="Warenkorb"> </li>
         </ul>
     </nav>
 	
@@ -71,18 +69,68 @@
     	<br>
     	<div class="div1">
     	    <form>          
-		    <label for="uname"> <textwhite> E-Mail </textwhite> </label>
-		        <input type="text" id="uName" name="uName" size="40" maxlength="30">
+		    <label for="uname" style="color:white;text-align: left; margin-left: initial">E-Mail:</label>
+		        <input type="text" id="email" name="uName" size="40" maxlength="30">
 		        <br>
-		    	<label for="password"> <textwhite>Passwort: </textwhite> </label>
+		    <label for="password" style="color:white;text-align: left; margin-left: initial">Passwort:</label>
 		        <input type="text" id="password" name="password" size="40" maxlength="30">
     	    </form>
 	        <br>
-	    <input type="submit" value="Anmelden" name="Anmelden">
+	    <input type="submit" value="Anmelden" name="Anmelden" id="logIn">
 	    <p style=" text-align: left; color:white; margin-left: initial; ">
-		    <textwhite> Noch keinen Account? </textwhite>
-	        <a href="registrierung.html" style="font-family: Arial, Helvetica, sans-serif; color:orange"> Registrieren </a>
+	        Noch keinen Account?
+	        <a href="registrierung.html" style="font-family: Arial, Helvetica, sans-serif; color:orange"> Regestrieren </a>
 	    </p>
      </div> 
 </body>
+
+
+<script type="module" >
+
+    // Import the functions you need from the SDKs you need
+    import {initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+    import {getDatabase} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAGdYmqeKOhGxPZYm8pelvKbG8Ms7uzPdE",
+        authDomain: "webshop2023-ovgu.firebaseapp.com",
+        databaseURL: "https://webshop2023-ovgu-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "webshop2023-ovgu",
+        storageBucket: "webshop2023-ovgu.appspot.com",
+        messagingSenderId: "255014201712",
+        appId: "1:255014201712:web:a2ed39e090ce3db10107b5"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    document.getElementById("logIn").addEventListener("click",function(){
+		var email = document.getElementById("email").value;
+		var password = document.getElementById("password").value;
+
+		signInWithEmailAndPassword(auth, email, password)
+		.then((userCredential)=>{
+			const user = userCredential.user;
+			sessionStorage.setItem("email", email);
+			location.href = 'index.html';
+
+		})
+		.catch((error)=> {
+			const errorCode = error.code;
+			const errorMessage = error.message;
+			alert("Benutzernahme und Passwort stimmen nicht überein!");
+		})
+	})
+ 
+
+
+</script>
+
 </html>

@@ -21,12 +21,16 @@ function ready() {
 }
 
 function purchaseClicked() {
-    alert('Vielen Dank für Ihren Einkauf :)')
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
+    if (sessionStorage.length==0){
+        alert("Für diese Aktivität müssen Sie angemeldet sein!")
+    } else{
+        alert('Vielen Dank für Ihren Einkauf :)')
+        var cartItems = document.getElementsByClassName('cart-items')[0]
+        while (cartItems.hasChildNodes()) {
+            cartItems.removeChild(cartItems.firstChild)
+        }
+        updateCartTotal()
     }
-    updateCartTotal()
 }
 
 function removeCartItem(event) {
