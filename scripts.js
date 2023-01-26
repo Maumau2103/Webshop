@@ -18,7 +18,6 @@ function validatePassword(password){
 
 function get(){
     var uname; 
-    alert("test");
     if (sessionStorage.length==0){
         uname = "Anmelden";
     } else uname = sessionStorage.getItem("email");
