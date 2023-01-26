@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider Sandbox</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_warenkorb.css">
+    <script src="warenkorb.js" async></script>
 </head>
 
 <body>
@@ -30,17 +31,66 @@
     <p style="text-align: center;"> Lerne was du willst, wann du willst. Stöbere dich durch unsere verschiedenen Kategorien und erlerne deinen neuen Skill. </p>
     <br> <br> <br> <br>
 
-    <h2>    <a href="it-skills.html"> <img src="images/IT-Skills.png" style="width: 15%;" /> </a> 
-            <a href="finanzen.html"> <img src="images/Finanzen.png" style="width: 15%; margin-left: 5%;" /> </a> 
-            <a href="musik.html"> <img src="images/Musik.png" style="width: 15%; margin-left: 5%;" /> </a>
-            <a href="sprachen.html"> <img src="images/Sprachen.png" style="width: 15%; margin-left: 5%;" /> </a>
+    <h2>    <a href="it-skills.html"> <img src="images/IT-Skills.png" style="width: 15%;" /></a> 
+            <a href="finanzen.html"> <img src="images/Finanzen.png" style="width: 15%; margin-left: 5%;" /></a> 
+            <a href="musik.html"> <img src="images/Musik.png" style="width: 15%; margin-left: 5%;" /></a>
+            <a href="sprachen.html"> <img src="images/Sprachen.png" style="width: 15%; margin-left: 5%;" /></a>
     </h2>
     <br> <br>
 
-    <h2>    <a href="essen.html"> <img src="images/Essen.png" style="width: 15%;" /> </a>
-            <a href="kunst.html"> <img src="images/Kunst.png" style="width: 15%; margin-left: 5%;" /> </a>
+    <h2>    <a href="essen.html"> <img src="images/Essen.png" style="width: 15%;" /></a>
+            <a href="kunst.html"> <img src="images/Kunst.png" style="width: 15%; margin-left: 5%;" /></a>
     </h2>
-    <br> <br> <br> <br>
+    <br> <br> <br> <br> <br>
+
+    <h1> Bestseller </h1>
+    <br>
+    <p style="text-align: center;"> Hier finden Sie die meistverkauftesten Kurse aus allen Kategorien. </p>
+    <br> <br> 
+
+    <section>
+		<div class="shop-items">
+			<div class="shop-item">
+				<span class="shop-item-title">MSOffice</span>
+                <br> <br>
+				<img class="shop-item-image" src="images/MSOffice-Bild.png" align="left">
+                In diesem Kurs erlernen Sie grundlegende IT-Skills mit den Pogrammen von Microsoft Office darunter fallen unter anderem: <a href="MSOFFICE.html"> Mehr erfahren...</a> <br> <br>
+				<div class="shop-item-details">
+					<span class="shop-item-price">24.99 €</span>
+					<button class="btn btn-primary shop-item-button" type="button">in den Warenkorb</button>
+				</div>
+			</div>
+            <br> <br> <br>
+			<div class="shop-item">
+				<span class="shop-item-title">Englisch Sprachkurs</span>
+                <br> <br>
+				<img class="shop-item-image" src="images/english.png" align="left">
+                In diesem Kurs erlernen sie grundlegende Englisch-Kenntnisse bis hin zu schon fortgeschrittenen Sprachskills. <a href="Englisch.html"> Mehr erfahren...</a> <br> <br>
+				<div class="shop-item-details">
+					<span class="shop-item-price">14.99 €</span>
+					<button class="btn btn-primary shop-item-button" type="button">in den Warenkorb</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br> <br> <br> <br> <br>
+
+	<section class="container content-section">
+		<h1> Warenkorb <img src="images/Warenkorb.png" height="32px"> </h1>
+		<br> <br> 
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Kurs</span>
+            <span class="cart-price cart-header cart-column">Preis</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Summe</strong>
+            <span class="cart-total-price">0 €</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">Jetzt Kaufen</button>
+    </section>
+	<br> <br> <br> <br>
 
 </body>
 </html>
