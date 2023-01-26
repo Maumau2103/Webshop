@@ -16,7 +16,7 @@ function validatePassword(password){
     } else return true;
 }
 
-function loadUser(){
+function get(){
     var uname; 
     alert("test");
     if (sessionStorage.length==0){
