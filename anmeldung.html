@@ -8,10 +8,7 @@
 	<script src="scripts.js"></script> 
 	
     <style> 
-        body {
-		background-color:#4EB5ED; font-family: Arial, Helvetica, sans-serif; color:white;
-		background-position: initial;
-		}
+
 	label{
 		width:100px;
 		display:inline-block;
@@ -23,27 +20,27 @@
 		margin: 10px;
 		border-radius: 5px;
 		border:none;
-		background: #39FF14;
+		background: rgb(129, 209, 255);
 		cursor:pointer;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 16px;
 		}
 	
     	.div1 {
-		font-family: Arial, Helvetica, sans-serif; color:white;
-		background-color: darkblue;
+		font-family: Arial, Helvetica, sans-serif; color: #333;
+		background-color: white;
 		width: 500px;
- 		border-style: solid;
-		border-color: black;
  		padding: 50px;
 		margin: auto ;
 		margin-top:180px;
-		border-radius: 7px;
+		border-radius: 10px;
 		position: relative; 
 		align-items: center;  
 
 		}
 	    
 	a{ 	
-		color: white;
+		color: #333;
 		text-decoration: none;
 		margin-left: 20px
 		
@@ -57,29 +54,30 @@
 	<nav>
         <a href="index.html"> <img src="images/SELFtaught (1).jpg" alt="logo"> </a>
         <ul>
-            <li><a class="active" href="index.html"> Home </a></li>
+            <li><a href="index.html"> Home </a></li>
             <li><a href="impressum.html"> Über Uns </a></li>
-            <li><a href="anmeldung.html" id="Anmelden"> Anmelden </a></li>
+            <li><a class="active" href="anmeldung.html" id="Anmelden"> Anmelden </a></li>
             <li><a href="registrierung.html"> Registrieren </a></li>
-            <li> <img src="images/Warenkorb.png" alt="Warenkorb"> </li>
+            <li><a href="warenkorb.html"> <img src="images/Warenkorb.png" alt="Warenkorb"> </a></li>
         </ul>
     </nav>
 	
-    	<br>
-    	<br>
+	<br> <br>
+	<h1> Anmeldung </h1>
+
     	<div class="div1">
     	    <form>          
-		    <label for="uname" style="color:white;text-align: left; margin-left: initial">E-Mail:</label>
+		    <label for="uname" style="color:#333;text-align: left; margin-left: initial">E-Mail:</label>
 		        <input type="text" id="email" name="uName" size="40" maxlength="30">
 		        <br>
-		    <label for="password" style="color:white;text-align: left; margin-left: initial">Passwort:</label>
+		    <label for="password" style="color:#333;text-align: left; margin-left: initial">Passwort:</label>
 		        <input type="text" id="password" name="password" size="40" maxlength="30">
     	    </form>
 	        <br>
-	    <input type="submit" value="Anmelden" name="Anmelden" id="logIn">
-	    <p style=" text-align: left; color:white; margin-left: initial; ">
+	    <input type="submit" value="Anmelden" name="Anmelden" id="logIn"> <br> <br>
+	    <p style=" text-align: left; color:#333; margin-left: initial; ">
 	        Noch keinen Account?
-	        <a href="registrierung.html" style="font-family: Arial, Helvetica, sans-serif; color:orange"> Regestrieren </a>
+	        <a href="registrierung.html" style="font-family: Arial, Helvetica, sans-serif; color:cornflowerblue"> Registrieren </a>
 	    </p>
      </div> 
 </body>
