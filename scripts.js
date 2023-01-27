@@ -1,4 +1,4 @@
-   function validateName(uname){
+function validateName(uname){
     var serching = uname.split("@");
     if (serching.length!=2){
         return false;
@@ -18,7 +18,7 @@ function validatePassword(password){
 
 function get(){
     var uname; 
-    if (sessionStorage.length==0){
+    if (sessionStorage.getItem("email")==null){
         uname = "Anmelden";
     } else uname = sessionStorage.getItem("email");
     document.getElementById("Anmelden").innerHTML = uname;
@@ -30,4 +30,10 @@ function test(){
     sessionStorage.setItem("email","test");
     location.href = 'index.html';
 
+}
+
+function logOut(){
+ if (sessionStorage.getItem("email")!=null){
+    location.href = 'logOut.html';
+ } else get();
 }
