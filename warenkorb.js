@@ -21,7 +21,7 @@ function ready() {
 }
 
 function purchaseClicked() {
-    if (sessionStorage.length==0){
+    if (sessionStorage.getItem("email")==null){
         alert("Für diese Aktivität müssen Sie angemeldet sein!")
     } else{
         alert('Vielen Dank für Ihren Einkauf :)')
