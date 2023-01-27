@@ -1,4 +1,4 @@
-   function validateName(uname){
+  function validateName(uname){
     var serching = uname.split("@");
     if (serching.length!=2){
         return false;
@@ -34,9 +34,6 @@ function test(){
 
 function logOut(){
  if (sessionStorage.getItem("email")!=null){
-    location.herf = 'logOut.html';
+    location.href = 'logOut.html';
  } else get();
 }
-   
-   
-   
