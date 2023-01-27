@@ -18,7 +18,7 @@ function validatePassword(password){
 
 function get(){
     var uname; 
-    if (sessionStorage.getItem("email")==Null){
+    if (sessionStorage.getItem("email")==null){
         uname = "Anmelden";
     } else uname = sessionStorage.getItem("email");
     document.getElementById("Anmelden").innerHTML = uname;
@@ -33,9 +33,9 @@ function test(){
 }
 
 function logOut(){
- if (sessionStorage.getItem("email")!=Null){
+ if (sessionStorage.getItem("email")!=null){
     location.herf = 'logOut.html';
- }
+ } else get();
 }
    
    
