@@ -70,3 +70,40 @@
 	    </p>
      </div> 
 </body>
+
+<script type="module" >
+
+    // Import the functions you need from the SDKs you need
+    import {initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+    import {getDatabase} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAGdYmqeKOhGxPZYm8pelvKbG8Ms7uzPdE",
+        authDomain: "webshop2023-ovgu.firebaseapp.com",
+        databaseURL: "https://webshop2023-ovgu-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "webshop2023-ovgu",
+        storageBucket: "webshop2023-ovgu.appspot.com",
+        messagingSenderId: "255014201712",
+        appId: "1:255014201712:web:a2ed39e090ce3db10107b5"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    document.getElementById("logOut").addEventListener("click",function() {
+        signOut(auth).then(() => {
+            sessionStorage.clear();
+            location.href = 'anmeldung.html';
+        }).catch((error) => {
+            alert("error");
+        })
+    })
+    </script>
+</html>
